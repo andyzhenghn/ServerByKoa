@@ -1,0 +1,14 @@
+{
+  "name": "serverbykoa",
+  "version": "1.0.0",
+  "description": "The server powered by Koa2",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ZZH",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.7.0"
+  }
+}
