@@ -20,6 +20,6 @@ exports.createToken = (config = {}, expiresIn = '7 days') => {
 // 解析JWT Token
 exports.decodeToken = token => {
     return JWT.decode(token);
-;}
+}
 
 exports.JWT_SECRET = JWT_SECRET;

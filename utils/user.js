@@ -3,12 +3,12 @@ const { decodeToken, parseAuth } = require('./account');
 
 // 从 authorization解析出用户 _id和 username
 const getUserInfo = ctx => {
-    return new Promise(async (resolve, reject) => {
+    return new Promise((resolve, reject) => {
         const authorization = parseAuth(ctx);
         const tokenDecoded = decodeToken(authorization);
         const { _id } = tokenDecoded;
         const userModal = mongoose.model('User');
-        await userModal.findById(_id).exec()
+        userModal.findById(_id).exec()
             .then(res => {
                 return resolve(res);
             })

@@ -4,7 +4,7 @@ const path = require('path');
 
 // 定义数据库地址的常量
 // 更标准的可以新建一个数据配置文件，专门存放数据相关的配置
-const DB_ADRESS = 'mongodb://localhost/ServerByKoa';
+const DB_ADDRESS = 'mongodb://localhost/ServerByKoa';
 let connectConfig = { useNewUrlParser: true };
 
 mongoose.Promise = global.Promise;
@@ -29,7 +29,7 @@ const connect = () => {
     };
 
     // 连接数据库
-    mongoose.connect(DB_ADRESS, connectConfig);
+    mongoose.connect(DB_ADDRESS, connectConfig);
     
     return new Promise((resolve, reject) => {
         // 监听断开

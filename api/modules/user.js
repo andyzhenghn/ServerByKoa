@@ -1,6 +1,8 @@
 const Router = require('koa-router');
-const router = new Router();
+const mongoose = require('mongoose');
 const { createToken } = require('../../utils/account');
+
+const router = new Router();
 
 router.post('/register', async ctx => {
     let data = ctx.request.body;
@@ -97,7 +99,7 @@ router.post('/login', async ctx => {
 });
 
 
-router.get('/user/:userId', async (ctx, next) => {
+router.get('/user/:userId', async ctx => {
     const id = ctx.params.userId;
     if (!id) {
         return ctx.body = {
