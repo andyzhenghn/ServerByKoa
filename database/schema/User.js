@@ -3,7 +3,6 @@ const bcrypt = require('bcrypt');
 
 const { Schema } = mongoose;
 const SALT_ROUNDS = 10;
-
 let ObjectId = Schema.Types.ObjectId;
 
 const userSchema = new Schema({
